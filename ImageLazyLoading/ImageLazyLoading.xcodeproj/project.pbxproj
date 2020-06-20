@@ -9,12 +9,21 @@
 /* Begin PBXBuildFile section */
 		1F74259F249E16BE008FA3DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F74259E249E16BE008FA3DC /* AppDelegate.swift */; };
 		1F7425A1249E16BE008FA3DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7425A0249E16BE008FA3DC /* SceneDelegate.swift */; };
-		1F7425A3249E16BE008FA3DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7425A2249E16BE008FA3DC /* ViewController.swift */; };
-		1F7425A6249E16BE008FA3DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F7425A4249E16BE008FA3DC /* Main.storyboard */; };
 		1F7425A9249E16BE008FA3DC /* ImageLazyLoading.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1F7425A7249E16BE008FA3DC /* ImageLazyLoading.xcdatamodeld */; };
 		1F7425AB249E16C0008FA3DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F7425AA249E16C0008FA3DC /* Assets.xcassets */; };
 		1F7425AE249E16C0008FA3DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F7425AC249E16C0008FA3DC /* LaunchScreen.storyboard */; };
 		1F7425B9249E16C0008FA3DC /* ImageLazyLoadingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7425B8249E16C0008FA3DC /* ImageLazyLoadingTests.swift */; };
+		1F7425C8249E1772008FA3DC /* ImageListView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F7425C7249E1772008FA3DC /* ImageListView.storyboard */; };
+		1F7425CA249E1786008FA3DC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7425C9249E1786008FA3DC /* BaseViewController.swift */; };
+		1F7425D0249E181F008FA3DC /* ImageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7425CF249E181F008FA3DC /* ImageListViewController.swift */; };
+		1F7425D2249E182E008FA3DC /* ImageListView+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7425D1249E182E008FA3DC /* ImageListView+TableView.swift */; };
+		1F7425DB249E18D2008FA3DC /* GlobalEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7425DA249E18D2008FA3DC /* GlobalEnums.swift */; };
+		1F7425DD249E18DA008FA3DC /* ErrorMessageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7425DC249E18DA008FA3DC /* ErrorMessageConstants.swift */; };
+		1F7425DF249E18E2008FA3DC /* CommonErrorContsants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7425DE249E18E2008FA3DC /* CommonErrorContsants.swift */; };
+		1F7425E1249E18EB008FA3DC /* CommonConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7425E0249E18EB008FA3DC /* CommonConstants.swift */; };
+		1F7425E3249E18F3008FA3DC /* CommonMessageContants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7425E2249E18F3008FA3DC /* CommonMessageContants.swift */; };
+		1F7425E7249E1901008FA3DC /* UIImageNameConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7425E6249E1901008FA3DC /* UIImageNameConstants.swift */; };
+		1F7425E9249E1954008FA3DC /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7425E8249E1954008FA3DC /* UIViewControllerExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,8 +40,6 @@
 		1F74259B249E16BE008FA3DC /* ImageLazyLoading.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageLazyLoading.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F74259E249E16BE008FA3DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F7425A0249E16BE008FA3DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1F7425A2249E16BE008FA3DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1F7425A5249E16BE008FA3DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1F7425A8249E16BE008FA3DC /* ImageLazyLoading.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ImageLazyLoading.xcdatamodel; sourceTree = "<group>"; };
 		1F7425AA249E16C0008FA3DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F7425AD249E16C0008FA3DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,6 +47,17 @@
 		1F7425B4249E16C0008FA3DC /* ImageLazyLoadingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageLazyLoadingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F7425B8249E16C0008FA3DC /* ImageLazyLoadingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLazyLoadingTests.swift; sourceTree = "<group>"; };
 		1F7425BA249E16C0008FA3DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F7425C7249E1772008FA3DC /* ImageListView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageListView.storyboard; sourceTree = "<group>"; };
+		1F7425C9249E1786008FA3DC /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		1F7425CF249E181F008FA3DC /* ImageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListViewController.swift; sourceTree = "<group>"; };
+		1F7425D1249E182E008FA3DC /* ImageListView+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageListView+TableView.swift"; sourceTree = "<group>"; };
+		1F7425DA249E18D2008FA3DC /* GlobalEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalEnums.swift; sourceTree = "<group>"; };
+		1F7425DC249E18DA008FA3DC /* ErrorMessageConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessageConstants.swift; sourceTree = "<group>"; };
+		1F7425DE249E18E2008FA3DC /* CommonErrorContsants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonErrorContsants.swift; sourceTree = "<group>"; };
+		1F7425E0249E18EB008FA3DC /* CommonConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonConstants.swift; sourceTree = "<group>"; };
+		1F7425E2249E18F3008FA3DC /* CommonMessageContants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonMessageContants.swift; sourceTree = "<group>"; };
+		1F7425E6249E1901008FA3DC /* UIImageNameConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageNameConstants.swift; sourceTree = "<group>"; };
+		1F7425E8249E1954008FA3DC /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +99,13 @@
 		1F74259D249E16BE008FA3DC /* ImageLazyLoading */ = {
 			isa = PBXGroup;
 			children = (
-				1F74259E249E16BE008FA3DC /* AppDelegate.swift */,
-				1F7425A0249E16BE008FA3DC /* SceneDelegate.swift */,
-				1F7425A2249E16BE008FA3DC /* ViewController.swift */,
-				1F7425A4249E16BE008FA3DC /* Main.storyboard */,
+				1F7425C5249E174B008FA3DC /* BaseViewController */,
+				1F7425C4249E1744008FA3DC /* Modules */,
+				1F7425C3249E1727008FA3DC /* AppDelegate */,
+				1F7425D6249E1862008FA3DC /* Handlers */,
+				1F7425D7249E189F008FA3DC /* Constants */,
+				1F7425D8249E18BD008FA3DC /* Extensions */,
+				1F7425D9249E18C4008FA3DC /* Utilities */,
 				1F7425AA249E16C0008FA3DC /* Assets.xcassets */,
 				1F7425AC249E16C0008FA3DC /* LaunchScreen.storyboard */,
 				1F7425AF249E16C0008FA3DC /* Info.plist */,
@@ -100,6 +121,108 @@
 				1F7425BA249E16C0008FA3DC /* Info.plist */,
 			);
 			path = ImageLazyLoadingTests;
+			sourceTree = "<group>";
+		};
+		1F7425C3249E1727008FA3DC /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				1F74259E249E16BE008FA3DC /* AppDelegate.swift */,
+				1F7425A0249E16BE008FA3DC /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		1F7425C4249E1744008FA3DC /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				1F7425C6249E1752008FA3DC /* ImageListView */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		1F7425C5249E174B008FA3DC /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1F7425C9249E1786008FA3DC /* BaseViewController.swift */,
+			);
+			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		1F7425C6249E1752008FA3DC /* ImageListView */ = {
+			isa = PBXGroup;
+			children = (
+				1F7425CE249E179A008FA3DC /* Controller */,
+				1F7425CD249E1795008FA3DC /* ViewModel */,
+				1F7425CC249E1791008FA3DC /* Model */,
+				1F7425CB249E178A008FA3DC /* Views */,
+			);
+			path = ImageListView;
+			sourceTree = "<group>";
+		};
+		1F7425CB249E178A008FA3DC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1F7425C7249E1772008FA3DC /* ImageListView.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1F7425CC249E1791008FA3DC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1F7425CD249E1795008FA3DC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1F7425CE249E179A008FA3DC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1F7425CF249E181F008FA3DC /* ImageListViewController.swift */,
+				1F7425D1249E182E008FA3DC /* ImageListView+TableView.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1F7425D6249E1862008FA3DC /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Handlers;
+			sourceTree = "<group>";
+		};
+		1F7425D7249E189F008FA3DC /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				1F7425DA249E18D2008FA3DC /* GlobalEnums.swift */,
+				1F7425DC249E18DA008FA3DC /* ErrorMessageConstants.swift */,
+				1F7425DE249E18E2008FA3DC /* CommonErrorContsants.swift */,
+				1F7425E0249E18EB008FA3DC /* CommonConstants.swift */,
+				1F7425E2249E18F3008FA3DC /* CommonMessageContants.swift */,
+				1F7425E6249E1901008FA3DC /* UIImageNameConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		1F7425D8249E18BD008FA3DC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1F7425E8249E1954008FA3DC /* UIViewControllerExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1F7425D9249E18C4008FA3DC /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,8 +307,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F7425AE249E16C0008FA3DC /* LaunchScreen.storyboard in Resources */,
+				1F7425C8249E1772008FA3DC /* ImageListView.storyboard in Resources */,
 				1F7425AB249E16C0008FA3DC /* Assets.xcassets in Resources */,
-				1F7425A6249E16BE008FA3DC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,9 +326,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F7425A3249E16BE008FA3DC /* ViewController.swift in Sources */,
+				1F7425D0249E181F008FA3DC /* ImageListViewController.swift in Sources */,
+				1F7425E7249E1901008FA3DC /* UIImageNameConstants.swift in Sources */,
+				1F7425E3249E18F3008FA3DC /* CommonMessageContants.swift in Sources */,
+				1F7425DF249E18E2008FA3DC /* CommonErrorContsants.swift in Sources */,
+				1F7425CA249E1786008FA3DC /* BaseViewController.swift in Sources */,
+				1F7425DD249E18DA008FA3DC /* ErrorMessageConstants.swift in Sources */,
+				1F7425D2249E182E008FA3DC /* ImageListView+TableView.swift in Sources */,
 				1F74259F249E16BE008FA3DC /* AppDelegate.swift in Sources */,
+				1F7425E1249E18EB008FA3DC /* CommonConstants.swift in Sources */,
+				1F7425E9249E1954008FA3DC /* UIViewControllerExtension.swift in Sources */,
 				1F7425A9249E16BE008FA3DC /* ImageLazyLoading.xcdatamodeld in Sources */,
+				1F7425DB249E18D2008FA3DC /* GlobalEnums.swift in Sources */,
 				1F7425A1249E16BE008FA3DC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -229,14 +361,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1F7425A4249E16BE008FA3DC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1F7425A5249E16BE008FA3DC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1F7425AC249E16C0008FA3DC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
