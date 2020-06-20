@@ -16,7 +16,7 @@
 		1F7425C8249E1772008FA3DC /* ImageListView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F7425C7249E1772008FA3DC /* ImageListView.storyboard */; };
 		1F7425CA249E1786008FA3DC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7425C9249E1786008FA3DC /* BaseViewController.swift */; };
 		1F7425D0249E181F008FA3DC /* ImageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7425CF249E181F008FA3DC /* ImageListViewController.swift */; };
-		1F7425D2249E182E008FA3DC /* ImageListView+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7425D1249E182E008FA3DC /* ImageListView+TableView.swift */; };
+		1F7425D2249E182E008FA3DC /* ImageListView+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7425D1249E182E008FA3DC /* ImageListView+CollectionView.swift */; };
 		1F7425DB249E18D2008FA3DC /* GlobalEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7425DA249E18D2008FA3DC /* GlobalEnums.swift */; };
 		1F7425DD249E18DA008FA3DC /* ErrorMessageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7425DC249E18DA008FA3DC /* ErrorMessageConstants.swift */; };
 		1F7425DF249E18E2008FA3DC /* CommonErrorContsants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7425DE249E18E2008FA3DC /* CommonErrorContsants.swift */; };
@@ -24,6 +24,15 @@
 		1F7425E3249E18F3008FA3DC /* CommonMessageContants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7425E2249E18F3008FA3DC /* CommonMessageContants.swift */; };
 		1F7425E7249E1901008FA3DC /* UIImageNameConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7425E6249E1901008FA3DC /* UIImageNameConstants.swift */; };
 		1F7425E9249E1954008FA3DC /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7425E8249E1954008FA3DC /* UIViewControllerExtension.swift */; };
+		1F7425ED249E2272008FA3DC /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7425EB249E2272008FA3DC /* ImageCollectionViewCell.swift */; };
+		1F7425EE249E2272008FA3DC /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F7425EC249E2272008FA3DC /* ImageCollectionViewCell.xib */; };
+		1F7425F0249E234C008FA3DC /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7425EF249E234C008FA3DC /* UICollectionViewExtension.swift */; };
+		1F7425F2249E239C008FA3DC /* CommonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7425F1249E239C008FA3DC /* CommonExtensions.swift */; };
+		1F76213F249E3BDE00B92E14 /* LoaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F76213E249E3BDE00B92E14 /* LoaderCollectionReusableView.swift */; };
+		1F762141249E3C5A00B92E14 /* ImageListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F762140249E3C5A00B92E14 /* ImageListViewModel.swift */; };
+		1F762143249E3CA500B92E14 /* ImageListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F762142249E3CA500B92E14 /* ImageListModel.swift */; };
+		1F762145249E3EF000B92E14 /* ImageListViewContants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F762144249E3EF000B92E14 /* ImageListViewContants.swift */; };
+		1F762148249E3F7E00B92E14 /* ImageListView+SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F762147249E3F7E00B92E14 /* ImageListView+SearchBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +59,7 @@
 		1F7425C7249E1772008FA3DC /* ImageListView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageListView.storyboard; sourceTree = "<group>"; };
 		1F7425C9249E1786008FA3DC /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		1F7425CF249E181F008FA3DC /* ImageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListViewController.swift; sourceTree = "<group>"; };
-		1F7425D1249E182E008FA3DC /* ImageListView+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageListView+TableView.swift"; sourceTree = "<group>"; };
+		1F7425D1249E182E008FA3DC /* ImageListView+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageListView+CollectionView.swift"; sourceTree = "<group>"; };
 		1F7425DA249E18D2008FA3DC /* GlobalEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalEnums.swift; sourceTree = "<group>"; };
 		1F7425DC249E18DA008FA3DC /* ErrorMessageConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessageConstants.swift; sourceTree = "<group>"; };
 		1F7425DE249E18E2008FA3DC /* CommonErrorContsants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonErrorContsants.swift; sourceTree = "<group>"; };
@@ -58,6 +67,15 @@
 		1F7425E2249E18F3008FA3DC /* CommonMessageContants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonMessageContants.swift; sourceTree = "<group>"; };
 		1F7425E6249E1901008FA3DC /* UIImageNameConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageNameConstants.swift; sourceTree = "<group>"; };
 		1F7425E8249E1954008FA3DC /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		1F7425EB249E2272008FA3DC /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		1F7425EC249E2272008FA3DC /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		1F7425EF249E234C008FA3DC /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
+		1F7425F1249E239C008FA3DC /* CommonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonExtensions.swift; sourceTree = "<group>"; };
+		1F76213E249E3BDE00B92E14 /* LoaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		1F762140249E3C5A00B92E14 /* ImageListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListViewModel.swift; sourceTree = "<group>"; };
+		1F762142249E3CA500B92E14 /* ImageListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListModel.swift; sourceTree = "<group>"; };
+		1F762144249E3EF000B92E14 /* ImageListViewContants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListViewContants.swift; sourceTree = "<group>"; };
+		1F762147249E3F7E00B92E14 /* ImageListView+SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageListView+SearchBar.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +153,7 @@
 		1F7425C4249E1744008FA3DC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				1F7425EA249E1C0A008FA3DC /* Storyboard */,
 				1F7425C6249E1752008FA3DC /* ImageListView */,
 			);
 			path = Modules;
@@ -151,6 +170,7 @@
 		1F7425C6249E1752008FA3DC /* ImageListView */ = {
 			isa = PBXGroup;
 			children = (
+				1F762146249E3F3800B92E14 /* Constant */,
 				1F7425CE249E179A008FA3DC /* Controller */,
 				1F7425CD249E1795008FA3DC /* ViewModel */,
 				1F7425CC249E1791008FA3DC /* Model */,
@@ -162,7 +182,9 @@
 		1F7425CB249E178A008FA3DC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1F7425C7249E1772008FA3DC /* ImageListView.storyboard */,
+				1F76213E249E3BDE00B92E14 /* LoaderCollectionReusableView.swift */,
+				1F7425EB249E2272008FA3DC /* ImageCollectionViewCell.swift */,
+				1F7425EC249E2272008FA3DC /* ImageCollectionViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -170,6 +192,7 @@
 		1F7425CC249E1791008FA3DC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1F762142249E3CA500B92E14 /* ImageListModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -177,6 +200,7 @@
 		1F7425CD249E1795008FA3DC /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				1F762140249E3C5A00B92E14 /* ImageListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -185,7 +209,8 @@
 			isa = PBXGroup;
 			children = (
 				1F7425CF249E181F008FA3DC /* ImageListViewController.swift */,
-				1F7425D1249E182E008FA3DC /* ImageListView+TableView.swift */,
+				1F7425D1249E182E008FA3DC /* ImageListView+CollectionView.swift */,
+				1F762147249E3F7E00B92E14 /* ImageListView+SearchBar.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -214,6 +239,8 @@
 			isa = PBXGroup;
 			children = (
 				1F7425E8249E1954008FA3DC /* UIViewControllerExtension.swift */,
+				1F7425EF249E234C008FA3DC /* UICollectionViewExtension.swift */,
+				1F7425F1249E239C008FA3DC /* CommonExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -223,6 +250,22 @@
 			children = (
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		1F7425EA249E1C0A008FA3DC /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				1F7425C7249E1772008FA3DC /* ImageListView.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		1F762146249E3F3800B92E14 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				1F762144249E3EF000B92E14 /* ImageListViewContants.swift */,
+			);
+			path = Constant;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,6 +351,7 @@
 			files = (
 				1F7425AE249E16C0008FA3DC /* LaunchScreen.storyboard in Resources */,
 				1F7425C8249E1772008FA3DC /* ImageListView.storyboard in Resources */,
+				1F7425EE249E2272008FA3DC /* ImageCollectionViewCell.xib in Resources */,
 				1F7425AB249E16C0008FA3DC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,19 +370,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F762141249E3C5A00B92E14 /* ImageListViewModel.swift in Sources */,
 				1F7425D0249E181F008FA3DC /* ImageListViewController.swift in Sources */,
+				1F762145249E3EF000B92E14 /* ImageListViewContants.swift in Sources */,
 				1F7425E7249E1901008FA3DC /* UIImageNameConstants.swift in Sources */,
 				1F7425E3249E18F3008FA3DC /* CommonMessageContants.swift in Sources */,
 				1F7425DF249E18E2008FA3DC /* CommonErrorContsants.swift in Sources */,
+				1F7425F0249E234C008FA3DC /* UICollectionViewExtension.swift in Sources */,
 				1F7425CA249E1786008FA3DC /* BaseViewController.swift in Sources */,
 				1F7425DD249E18DA008FA3DC /* ErrorMessageConstants.swift in Sources */,
-				1F7425D2249E182E008FA3DC /* ImageListView+TableView.swift in Sources */,
+				1F7425D2249E182E008FA3DC /* ImageListView+CollectionView.swift in Sources */,
 				1F74259F249E16BE008FA3DC /* AppDelegate.swift in Sources */,
+				1F762148249E3F7E00B92E14 /* ImageListView+SearchBar.swift in Sources */,
 				1F7425E1249E18EB008FA3DC /* CommonConstants.swift in Sources */,
+				1F7425F2249E239C008FA3DC /* CommonExtensions.swift in Sources */,
 				1F7425E9249E1954008FA3DC /* UIViewControllerExtension.swift in Sources */,
+				1F7425ED249E2272008FA3DC /* ImageCollectionViewCell.swift in Sources */,
 				1F7425A9249E16BE008FA3DC /* ImageLazyLoading.xcdatamodeld in Sources */,
 				1F7425DB249E18D2008FA3DC /* GlobalEnums.swift in Sources */,
 				1F7425A1249E16BE008FA3DC /* SceneDelegate.swift in Sources */,
+				1F762143249E3CA500B92E14 /* ImageListModel.swift in Sources */,
+				1F76213F249E3BDE00B92E14 /* LoaderCollectionReusableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
