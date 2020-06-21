@@ -36,9 +36,4 @@ class ImageCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
-    
-    // MARK: - Configure cell
-    
-    // MARK: - Action Methods
 }

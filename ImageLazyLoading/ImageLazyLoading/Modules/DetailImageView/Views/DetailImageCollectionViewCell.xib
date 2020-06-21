@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DetailImageCollectionViewCell" id="gTV-IL-0wX" customClass="DetailImageCollectionViewCell" customModule="ImageLazyLoading" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="281" height="426"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="281" height="426"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeHolderImage" translatesAutoresizingMaskIntoConstraints="NO" id="qKg-Ld-4Tc">
+                        <rect key="frame" x="0.0" y="0.0" width="281" height="426"/>
+                    </imageView>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="EUn-Du-aMZ">
+                        <rect key="frame" x="122" y="194.5" width="37" height="37"/>
+                        <color key="color" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </activityIndicatorView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="qKg-Ld-4Tc" secondAttribute="bottom" id="ChN-TY-sx4"/>
+                <constraint firstItem="EUn-Du-aMZ" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="PFa-Q1-gE6"/>
+                <constraint firstItem="EUn-Du-aMZ" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="QZj-tN-StA"/>
+                <constraint firstAttribute="trailing" secondItem="qKg-Ld-4Tc" secondAttribute="trailing" id="Z2M-Bj-bv9"/>
+                <constraint firstItem="qKg-Ld-4Tc" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="kg3-o8-vow"/>
+                <constraint firstItem="qKg-Ld-4Tc" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="oaV-Cq-aDW"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="281" height="426"/>
+            <connections>
+                <outlet property="activityIndicatorView" destination="EUn-Du-aMZ" id="2Do-v8-tuI"/>
+                <outlet property="displayImageView" destination="qKg-Ld-4Tc" id="IGa-Nh-oQp"/>
+            </connections>
+            <point key="canvasLocation" x="303.62318840579712" y="230.35714285714283"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="placeHolderImage" width="40" height="40"/>
+    </resources>
+</document>

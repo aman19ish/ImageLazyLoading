@@ -133,14 +133,70 @@
                             <constraint firstAttribute="trailing" secondItem="XDI-bJ-9QQ" secondAttribute="trailing" id="LbX-9W-s7f"/>
                             <constraint firstItem="XDI-bJ-9QQ" firstAttribute="leading" secondItem="xuF-m5-OVz" secondAttribute="leading" id="Nqf-1X-OnT"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="kbN-tZ-g59"/>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="XDI-bJ-9QQ" id="o5i-Mx-xX5"/>
+                        <outlet property="tableViewBottomConstraint" destination="AVq-Oz-utl" id="p8k-Yf-Umf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RSr-6F-aZ0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1887" y="45"/>
         </scene>
+        <!--Image Detail-->
+        <scene sceneID="gEu-J3-9db">
+            <objects>
+                <viewController storyboardIdentifier="DetailImageViewController" id="AQH-N4-sbx" customClass="DetailImageViewController" customModule="ImageLazyLoading" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hLK-iF-5c9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="za1-59-vaS">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="fjf-0j-wF2">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="AQH-N4-sbx" id="EwF-tS-Kc1"/>
+                                    <outlet property="delegate" destination="AQH-N4-sbx" id="6DC-ak-4CZ"/>
+                                    <outlet property="prefetchDataSource" destination="AQH-N4-sbx" id="SUj-QT-bRO"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="lC3-8M-1T4" firstAttribute="trailing" secondItem="za1-59-vaS" secondAttribute="trailing" id="LRa-V5-Unx"/>
+                            <constraint firstItem="za1-59-vaS" firstAttribute="top" secondItem="lC3-8M-1T4" secondAttribute="top" id="MeO-Ra-ocZ"/>
+                            <constraint firstItem="lC3-8M-1T4" firstAttribute="bottom" secondItem="za1-59-vaS" secondAttribute="bottom" id="jSi-gW-Mlm"/>
+                            <constraint firstItem="za1-59-vaS" firstAttribute="leading" secondItem="lC3-8M-1T4" secondAttribute="leading" id="o2y-I5-zRb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lC3-8M-1T4"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Image Detail" id="H3U-uR-hS9">
+                        <barButtonItem key="leftBarButtonItem" image="back" id="xXS-bi-S7e">
+                            <color key="tintColor" red="0.12549019610000001" green="0.12549019610000001" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="navBarLeftBackButtonAction:" destination="AQH-N4-sbx" id="jmX-1Q-JT3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="collectionView" destination="za1-59-vaS" id="rtH-lg-HRG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zMb-Fd-khY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2695" y="88"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="back" width="16" height="16"/>
+    </resources>
 </document>

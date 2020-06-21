@@ -62,6 +62,11 @@
 		1F762193249F6FFD00B92E14 /* UserDeaultHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F762192249F6FFD00B92E14 /* UserDeaultHandler.swift */; };
 		1F762198249F898300B92E14 /* CommonNullView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F762197249F898300B92E14 /* CommonNullView.swift */; };
 		1F76219A249F898D00B92E14 /* CommonNullView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F762199249F898D00B92E14 /* CommonNullView.xib */; };
+		1F7621A0249FA34000B92E14 /* DetailImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F76219F249FA34000B92E14 /* DetailImageViewController.swift */; };
+		1F7621A2249FA3A900B92E14 /* DetailImage+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7621A1249FA3A900B92E14 /* DetailImage+CollectionView.swift */; };
+		1F7621A7249FA3D100B92E14 /* DetailImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7621A5249FA3D100B92E14 /* DetailImageCollectionViewCell.swift */; };
+		1F7621A8249FA3D100B92E14 /* DetailImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F7621A6249FA3D100B92E14 /* DetailImageCollectionViewCell.xib */; };
+		1F7621AA249FA7C900B92E14 /* ImageLazyLoadingUtilityMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7621A9249FA7C900B92E14 /* ImageLazyLoadingUtilityMethods.swift */; };
 		7AD6636C3F63575419781418 /* Pods_ImageLazyLoadingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F60DA5292061D1585906153A /* Pods_ImageLazyLoadingTests.framework */; };
 		DCBB7FE4F7445D4BEBFAD3E7 /* Pods_ImageLazyLoading.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CE58D65BE8131B852179D42 /* Pods_ImageLazyLoading.framework */; };
 /* End PBXBuildFile section */
@@ -136,6 +141,11 @@
 		1F762192249F6FFD00B92E14 /* UserDeaultHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserDeaultHandler.swift; path = ImageLazyLoading/Modules/AutoSuggestion/Model/UserDeaultHandler.swift; sourceTree = SOURCE_ROOT; };
 		1F762197249F898300B92E14 /* CommonNullView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonNullView.swift; sourceTree = "<group>"; };
 		1F762199249F898D00B92E14 /* CommonNullView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommonNullView.xib; sourceTree = "<group>"; };
+		1F76219F249FA34000B92E14 /* DetailImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailImageViewController.swift; sourceTree = "<group>"; };
+		1F7621A1249FA3A900B92E14 /* DetailImage+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailImage+CollectionView.swift"; sourceTree = "<group>"; };
+		1F7621A5249FA3D100B92E14 /* DetailImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		1F7621A6249FA3D100B92E14 /* DetailImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		1F7621A9249FA7C900B92E14 /* ImageLazyLoadingUtilityMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLazyLoadingUtilityMethods.swift; sourceTree = "<group>"; };
 		883C76FA6982922A13E5F6FB /* Pods-ImageLazyLoading.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageLazyLoading.debug.xcconfig"; path = "Target Support Files/Pods-ImageLazyLoading/Pods-ImageLazyLoading.debug.xcconfig"; sourceTree = "<group>"; };
 		8CE58D65BE8131B852179D42 /* Pods_ImageLazyLoading.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageLazyLoading.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99CB949A549E89076ED0563F /* Pods-ImageLazyLoadingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageLazyLoadingTests.release.xcconfig"; path = "Target Support Files/Pods-ImageLazyLoadingTests/Pods-ImageLazyLoadingTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -226,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				1F7425EA249E1C0A008FA3DC /* Storyboard */,
+				1F76219B249FA2FE00B92E14 /* DetailImageView */,
 				1F762179249F62F500B92E14 /* AutoSuggestion */,
 				1F7425C6249E1752008FA3DC /* ImageListView */,
 			);
@@ -328,6 +339,7 @@
 		1F7425D9249E18C4008FA3DC /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				1F7621A9249FA7C900B92E14 /* ImageLazyLoadingUtilityMethods.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -495,6 +507,33 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		1F76219B249FA2FE00B92E14 /* DetailImageView */ = {
+			isa = PBXGroup;
+			children = (
+				1F76219E249FA32500B92E14 /* Views */,
+				1F76219C249FA31000B92E14 /* Controller */,
+			);
+			path = DetailImageView;
+			sourceTree = "<group>";
+		};
+		1F76219C249FA31000B92E14 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1F76219F249FA34000B92E14 /* DetailImageViewController.swift */,
+				1F7621A1249FA3A900B92E14 /* DetailImage+CollectionView.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1F76219E249FA32500B92E14 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1F7621A5249FA3D100B92E14 /* DetailImageCollectionViewCell.swift */,
+				1F7621A6249FA3D100B92E14 /* DetailImageCollectionViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		4EC836AB17EAAF5A90852565 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -602,6 +641,7 @@
 				1F7425AE249E16C0008FA3DC /* LaunchScreen.storyboard in Resources */,
 				1F7425C8249E1772008FA3DC /* ImageListView.storyboard in Resources */,
 				1F7425EE249E2272008FA3DC /* ImageCollectionViewCell.xib in Resources */,
+				1F7621A8249FA3D100B92E14 /* DetailImageCollectionViewCell.xib in Resources */,
 				1F762184249F648200B92E14 /* AutoSuggestionTableViewCell.xib in Resources */,
 				1F7425AB249E16C0008FA3DC /* Assets.xcassets in Resources */,
 				1F76219A249F898D00B92E14 /* CommonNullView.xib in Resources */,
@@ -691,6 +731,7 @@
 				1F76216E249F197F00B92E14 /* ImageListViewService.swift in Sources */,
 				1F762176249F502700B92E14 /* StringExtension.swift in Sources */,
 				1F762191249F68B100B92E14 /* AutoSuggestionModel.swift in Sources */,
+				1F7621A0249FA34000B92E14 /* DetailImageViewController.swift in Sources */,
 				1F762178249F554400B92E14 /* APIKeyConstants.swift in Sources */,
 				1F762174249F271B00B92E14 /* ImageManager.swift in Sources */,
 				1F7425D0249E181F008FA3DC /* ImageListViewController.swift in Sources */,
@@ -703,6 +744,7 @@
 				1F76218A249F657B00B92E14 /* UITableIViewExtension.swift in Sources */,
 				1F7425CA249E1786008FA3DC /* BaseViewController.swift in Sources */,
 				1F762168249E81BD00B92E14 /* ProviderProtocol.swift in Sources */,
+				1F7621AA249FA7C900B92E14 /* ImageLazyLoadingUtilityMethods.swift in Sources */,
 				1F7425DD249E18DA008FA3DC /* ErrorMessageConstants.swift in Sources */,
 				1F762158249E7E7500B92E14 /* HTTPMethod.swift in Sources */,
 				1F7425D2249E182E008FA3DC /* ImageListView+CollectionView.swift in Sources */,
@@ -719,6 +761,7 @@
 				1F762188249F651000B92E14 /* AutoSuggestionViewModel.swift in Sources */,
 				1F7425F2249E239C008FA3DC /* CommonExtensions.swift in Sources */,
 				1F7425E9249E1954008FA3DC /* UIViewControllerExtension.swift in Sources */,
+				1F7621A2249FA3A900B92E14 /* DetailImage+CollectionView.swift in Sources */,
 				1F76215C249E7F2200B92E14 /* DictionaryExtension.swift in Sources */,
 				1F7425ED249E2272008FA3DC /* ImageCollectionViewCell.swift in Sources */,
 				1F7425A9249E16BE008FA3DC /* ImageLazyLoading.xcdatamodeld in Sources */,
@@ -734,6 +777,7 @@
 				1F76215A249E7E8000B92E14 /* Task.swift in Sources */,
 				1F76213F249E3BDE00B92E14 /* LoaderCollectionReusableView.swift in Sources */,
 				1F76218C249F65D200B92E14 /* UITableViewCellExtension.swift in Sources */,
+				1F7621A7249FA3D100B92E14 /* DetailImageCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
