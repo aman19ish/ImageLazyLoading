@@ -8,9 +8,10 @@
 
 import UIKit
 
-class AutoSuggestionViewController: UIViewController {
+class AutoSuggestionViewController: BaseViewController {
     // MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableViewBottomConstraint: NSLayoutConstraint!
     
     // MARK: - Properties
     lazy var viewModel = AutoSuggestionViewModel()
@@ -43,4 +44,22 @@ extension AutoSuggestionViewController {
             }
         }
     }
+}
+
+extension AutoSuggestionViewController {
+    // MARK: - Keyboard notifications
+       //Method to hide keyboard from screen
+       override func keyboardWillDisappear(notification: NSNotification) {
+           tableViewBottomConstraint.constant = 0.0
+       }
+       
+       //Method to present keyboard on screen
+       override func keyboardWillAppear(notification: NSNotification) {
+           if #available(iOS 11.0, *) {
+               tableViewBottomConstraint.constant = (ImageLazyLoadingUtilityMethods.getKeyboardHeightBy(notification: notification) ?? tableViewBottomConstraint.constant) - view.safeAreaInsets.bottom
+           } else {
+               tableViewBottomConstraint.constant = ImageLazyLoadingUtilityMethods.getKeyboardHeightBy(notification: notification) ?? tableViewBottomConstraint.constant
+           }
+           view.layoutIfNeeded()
+       }
 }

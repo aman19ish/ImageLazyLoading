@@ -90,7 +90,13 @@ extension ImageListViewController: UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        autoSuggestioncontainerView.isHidden = true
+        searchBar.resignFirstResponder()
+
+        let controller = DetailImageViewController.instanceFromStoryboard(storyBoardName: Storyboard.imageListView.rawValue, type: DetailImageViewController.self)
+        controller.viewModel = viewModel
+        controller.selectedIndexPath = indexPath
+        navigationController?.pushViewController(controller, animated: true)
     }
     
 }
