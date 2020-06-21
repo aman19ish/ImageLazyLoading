@@ -1,0 +1,21 @@
+PODS:
+  - XMLParsing (0.0.3)
+
+DEPENDENCIES:
+  - XMLParsing (from `https://github.com/ShawnMoore/XMLParsing.git`)
+
+EXTERNAL SOURCES:
+  XMLParsing:
+    :git: https://github.com/ShawnMoore/XMLParsing.git
+
+CHECKOUT OPTIONS:
+  XMLParsing:
+    :commit: 594272e4df40798c53ae1735ee65f3f387291670
+    :git: https://github.com/ShawnMoore/XMLParsing.git
+
+SPEC CHECKSUMS:
+  XMLParsing: 085edb6fa22c71d6b53a79299f990a91e7414d19
+
+PODFILE CHECKSUM: deba2be38e60547af55f78ef256ff55be9e59603
+
+COCOAPODS: 1.9.1

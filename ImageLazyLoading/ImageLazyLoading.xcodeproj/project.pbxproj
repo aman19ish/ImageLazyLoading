@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -62,6 +62,8 @@
 		1F762193249F6FFD00B92E14 /* UserDeaultHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F762192249F6FFD00B92E14 /* UserDeaultHandler.swift */; };
 		1F762198249F898300B92E14 /* CommonNullView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F762197249F898300B92E14 /* CommonNullView.swift */; };
 		1F76219A249F898D00B92E14 /* CommonNullView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F762199249F898D00B92E14 /* CommonNullView.xib */; };
+		7AD6636C3F63575419781418 /* Pods_ImageLazyLoadingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F60DA5292061D1585906153A /* Pods_ImageLazyLoadingTests.framework */; };
+		DCBB7FE4F7445D4BEBFAD3E7 /* Pods_ImageLazyLoading.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CE58D65BE8131B852179D42 /* Pods_ImageLazyLoading.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,6 +136,12 @@
 		1F762192249F6FFD00B92E14 /* UserDeaultHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserDeaultHandler.swift; path = ImageLazyLoading/Modules/AutoSuggestion/Model/UserDeaultHandler.swift; sourceTree = SOURCE_ROOT; };
 		1F762197249F898300B92E14 /* CommonNullView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonNullView.swift; sourceTree = "<group>"; };
 		1F762199249F898D00B92E14 /* CommonNullView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommonNullView.xib; sourceTree = "<group>"; };
+		883C76FA6982922A13E5F6FB /* Pods-ImageLazyLoading.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageLazyLoading.debug.xcconfig"; path = "Target Support Files/Pods-ImageLazyLoading/Pods-ImageLazyLoading.debug.xcconfig"; sourceTree = "<group>"; };
+		8CE58D65BE8131B852179D42 /* Pods_ImageLazyLoading.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageLazyLoading.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		99CB949A549E89076ED0563F /* Pods-ImageLazyLoadingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageLazyLoadingTests.release.xcconfig"; path = "Target Support Files/Pods-ImageLazyLoadingTests/Pods-ImageLazyLoadingTests.release.xcconfig"; sourceTree = "<group>"; };
+		DACE49D0B5EA0CDA561ED8CB /* Pods-ImageLazyLoading.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageLazyLoading.release.xcconfig"; path = "Target Support Files/Pods-ImageLazyLoading/Pods-ImageLazyLoading.release.xcconfig"; sourceTree = "<group>"; };
+		ED88EBD869F377D94E9F742B /* Pods-ImageLazyLoadingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageLazyLoadingTests.debug.xcconfig"; path = "Target Support Files/Pods-ImageLazyLoadingTests/Pods-ImageLazyLoadingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F60DA5292061D1585906153A /* Pods_ImageLazyLoadingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageLazyLoadingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +149,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCBB7FE4F7445D4BEBFAD3E7 /* Pods_ImageLazyLoading.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +157,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AD6636C3F63575419781418 /* Pods_ImageLazyLoadingTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +170,8 @@
 				1F74259D249E16BE008FA3DC /* ImageLazyLoading */,
 				1F7425B7249E16C0008FA3DC /* ImageLazyLoadingTests */,
 				1F74259C249E16BE008FA3DC /* Products */,
+				4EC836AB17EAAF5A90852565 /* Pods */,
+				D137FF01DF41945402518017 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -345,8 +357,6 @@
 				1F762162249E805100B92E14 /* Protocol */,
 				1F76215D249E802000B92E14 /* Extension */,
 				1F762150249E7E1300B92E14 /* Enums */,
-				1F762165249E80AB00B92E14 /* ServerEndPoint.swift */,
-				1F762177249F554400B92E14 /* APIKeyConstants.swift */,
 			);
 			path = NetworkHandler;
 			sourceTree = "<group>";
@@ -401,6 +411,8 @@
 		1F762171249F1E2A00B92E14 /* EndPoints */ = {
 			isa = PBXGroup;
 			children = (
+				1F762177249F554400B92E14 /* APIKeyConstants.swift */,
+				1F762165249E80AB00B92E14 /* ServerEndPoint.swift */,
 			);
 			path = EndPoints;
 			sourceTree = "<group>";
@@ -483,6 +495,26 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		4EC836AB17EAAF5A90852565 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				883C76FA6982922A13E5F6FB /* Pods-ImageLazyLoading.debug.xcconfig */,
+				DACE49D0B5EA0CDA561ED8CB /* Pods-ImageLazyLoading.release.xcconfig */,
+				ED88EBD869F377D94E9F742B /* Pods-ImageLazyLoadingTests.debug.xcconfig */,
+				99CB949A549E89076ED0563F /* Pods-ImageLazyLoadingTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D137FF01DF41945402518017 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8CE58D65BE8131B852179D42 /* Pods_ImageLazyLoading.framework */,
+				F60DA5292061D1585906153A /* Pods_ImageLazyLoadingTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -490,9 +522,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F7425BD249E16C0008FA3DC /* Build configuration list for PBXNativeTarget "ImageLazyLoading" */;
 			buildPhases = (
+				909CAADCCC62AFAF5BE06545 /* [CP] Check Pods Manifest.lock */,
 				1F742597249E16BE008FA3DC /* Sources */,
 				1F742598249E16BE008FA3DC /* Frameworks */,
 				1F742599249E16BE008FA3DC /* Resources */,
+				909CD9350C5FFEB57FBE853C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -507,6 +541,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F7425C0249E16C0008FA3DC /* Build configuration list for PBXNativeTarget "ImageLazyLoadingTests" */;
 			buildPhases = (
+				37616C6BDBC83DA2ACFD92FB /* [CP] Check Pods Manifest.lock */,
 				1F7425B0249E16C0008FA3DC /* Sources */,
 				1F7425B1249E16C0008FA3DC /* Frameworks */,
 				1F7425B2249E16C0008FA3DC /* Resources */,
@@ -581,6 +616,70 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		37616C6BDBC83DA2ACFD92FB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ImageLazyLoadingTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		909CAADCCC62AFAF5BE06545 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ImageLazyLoading-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		909CD9350C5FFEB57FBE853C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ImageLazyLoading/Pods-ImageLazyLoading-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ImageLazyLoading/Pods-ImageLazyLoading-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ImageLazyLoading/Pods-ImageLazyLoading-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1F742597249E16BE008FA3DC /* Sources */ = {
@@ -784,6 +883,7 @@
 		};
 		1F7425BE249E16C0008FA3DC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 883C76FA6982922A13E5F6FB /* Pods-ImageLazyLoading.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -801,6 +901,7 @@
 		};
 		1F7425BF249E16C0008FA3DC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DACE49D0B5EA0CDA561ED8CB /* Pods-ImageLazyLoading.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -818,6 +919,7 @@
 		};
 		1F7425C1249E16C0008FA3DC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED88EBD869F377D94E9F742B /* Pods-ImageLazyLoadingTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -839,6 +941,7 @@
 		};
 		1F7425C2249E16C0008FA3DC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99CB949A549E89076ED0563F /* Pods-ImageLazyLoadingTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

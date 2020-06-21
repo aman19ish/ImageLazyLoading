@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import XMLParsing
 
 open class URLSessionProvider: ProviderProtocol {
     
@@ -43,13 +44,24 @@ open class URLSessionProvider: ProviderProtocol {
                 let statusCode = httpResponse.statusCode
                 if statusCode >= ResponseStatusCode.successMinRange.rawValue,
                     statusCode <= ResponseStatusCode.successMaxRange.rawValue {
-                    let decoder = JSONDecoder()
-                    do {
-                        let responseData = try decoder.decode(T.self, from: data)
-                        success(responseData)
-                    } catch {
-                        debugPrint(error.localizedDescription)
-                        failure(error)
+                    if response?.mimeType == "text/xml" {
+                        let decoder = XMLDecoder()
+                        do {
+                            let responseData = try decoder.decode(T.self, from: data)
+                            success(responseData)
+                        } catch {
+                            debugPrint(error.localizedDescription)
+                            failure(error)
+                        }
+                    } else {
+                        let decoder = JSONDecoder()
+                        do {
+                            let responseData = try decoder.decode(T.self, from: data)
+                            success(responseData)
+                        } catch {
+                            debugPrint(error.localizedDescription)
+                            failure(error)
+                        }
                     }
                     return
                 } else {
