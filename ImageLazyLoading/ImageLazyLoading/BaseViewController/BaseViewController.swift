@@ -67,10 +67,10 @@ extension BaseViewController {
 
 // MARK: - Show Error Message
 extension BaseViewController {
-    func showAlertWithHandlers(messageTitle: String = MessageConstants.appTitle, messageText: String?, actionLeftTitle: String = MessageConstants.cancel, actionRightTitle: String = MessageConstants.oK, cancelCompletion: ((_ alert: UIAlertAction) -> Void), okCompletion: ((_ alert: UIAlertAction) -> Void)?) {
+    func showAlertWithHandlers(messageTitle: String = MessageConstants.appTitle, messageText: String?, actionLeftTitle: String = MessageConstants.cancel, actionRightTitle: String = MessageConstants.oK, cancelCompletion: ((_ alert: UIAlertAction) -> Void)?, okCompletion: ((_ alert: UIAlertAction) -> Void)?) {
         let uiAlert = UIAlertController(title: messageTitle, message: messageText ?? ErrorMessageConstants.unknown.rawValue, preferredStyle: UIAlertController.Style.alert)
         uiAlert.addAction(UIAlertAction(title: actionLeftTitle, style: .default) { (alert) in
-            okCompletion?(alert)
+            cancelCompletion?(alert)
         })
         uiAlert.addAction(UIAlertAction(title: actionRightTitle, style: .default) { (alert) in
             okCompletion?(alert)

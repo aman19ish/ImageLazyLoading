@@ -11,7 +11,7 @@ import Foundation
 // MARK: - Empty
 struct ImageListModel: Codable {
     let total, totalHits: Int?
-    let imageDetailList: [ImageDetailModel]?
+    var imageDetailList: [ImageDetailModel]?
     
     enum CodingKeys: String, CodingKey {
         case total, totalHits

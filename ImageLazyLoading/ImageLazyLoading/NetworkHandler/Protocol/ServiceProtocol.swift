@@ -12,7 +12,6 @@ public typealias HTTPHeaders = [String: String]
 
 public protocol ServiceProtocol {
     var baseURLString: String { get }
-    var key: String { get }
     var path: String { get }
     var subPath: String { get }
     var method: HTTPMethod { get }
@@ -63,7 +62,7 @@ public extension ServiceProtocol {
     }
     
     var path: String {
-        return ServerEndPoint.getAPIEndPoint(for: key)
+        return ""
     }
     
     var subPath: String {

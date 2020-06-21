@@ -8,4 +8,6 @@
 
 import UIKit
 
-
+struct CommonErrorContsants {
+    static let searchStringIsToLong = "Search string is to long."
+}
