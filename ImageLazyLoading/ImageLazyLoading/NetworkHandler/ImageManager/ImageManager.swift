@@ -90,7 +90,9 @@ extension ImageManager {
     }
     
     private func removeRequestFromQueue(url: URL) {
-        requestQueue.removeValue(forKey: url)
+        if let _ = requestQueue[url] {
+            requestQueue.removeValue(forKey: url)
+        }
     }
     
     func setLowPriority(url: URL) {

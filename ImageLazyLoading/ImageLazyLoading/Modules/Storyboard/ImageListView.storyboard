@@ -15,6 +15,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RHf-mc-vNo">
+                                <rect key="frame" x="186" y="437" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4yY-vC-yXI">
                                 <rect key="frame" x="0.0" y="108" width="414" height="788"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -50,12 +57,23 @@
                                     <outlet property="prefetchDataSource" destination="Lzb-6u-78Z" id="o5a-au-Go7"/>
                                 </connections>
                             </collectionView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uEz-hP-Wnu">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <segue destination="63y-je-boY" kind="embed" id="Vt9-JF-gVr"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="DIE-d1-JfS" firstAttribute="trailing" secondItem="4yY-vC-yXI" secondAttribute="trailing" id="1rg-2C-3wg"/>
+                            <constraint firstItem="DIE-d1-JfS" firstAttribute="trailing" secondItem="uEz-hP-Wnu" secondAttribute="trailing" id="3pL-7x-poy"/>
                             <constraint firstAttribute="bottom" secondItem="4yY-vC-yXI" secondAttribute="bottom" id="8Bg-Mb-30V"/>
+                            <constraint firstItem="DIE-d1-JfS" firstAttribute="bottom" secondItem="uEz-hP-Wnu" secondAttribute="bottom" id="EJS-5Q-q1V"/>
                             <constraint firstItem="4yY-vC-yXI" firstAttribute="top" secondItem="DIE-d1-JfS" secondAttribute="top" constant="20" id="Km4-nQ-58o"/>
+                            <constraint firstItem="uEz-hP-Wnu" firstAttribute="top" secondItem="DIE-d1-JfS" secondAttribute="top" id="Xdd-GR-SC9"/>
+                            <constraint firstItem="uEz-hP-Wnu" firstAttribute="leading" secondItem="DIE-d1-JfS" secondAttribute="leading" id="dRM-ZO-BpP"/>
                             <constraint firstItem="4yY-vC-yXI" firstAttribute="leading" secondItem="DIE-d1-JfS" secondAttribute="leading" id="gdc-cg-QqW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DIE-d1-JfS"/>
@@ -69,6 +87,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="autoSuggestioncontainerView" destination="uEz-hP-Wnu" id="A6Z-SI-4R3"/>
                         <outlet property="collectionView" destination="4yY-vC-yXI" id="Hho-QC-Tho"/>
                     </connections>
                 </viewController>
@@ -93,6 +112,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IMe-iw-n6V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="85.714285714285708"/>
+        </scene>
+        <!--Auto Suggestion View Controller-->
+        <scene sceneID="7RG-ix-UBy">
+            <objects>
+                <viewController storyboardIdentifier="AutoSuggestionViewController" id="63y-je-boY" customClass="AutoSuggestionViewController" customModule="ImageLazyLoading" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xuF-m5-OVz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XDI-bJ-9QQ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="XDI-bJ-9QQ" firstAttribute="top" secondItem="xuF-m5-OVz" secondAttribute="top" id="5fB-7L-EVU"/>
+                            <constraint firstAttribute="bottom" secondItem="XDI-bJ-9QQ" secondAttribute="bottom" id="AVq-Oz-utl"/>
+                            <constraint firstAttribute="trailing" secondItem="XDI-bJ-9QQ" secondAttribute="trailing" id="LbX-9W-s7f"/>
+                            <constraint firstItem="XDI-bJ-9QQ" firstAttribute="leading" secondItem="xuF-m5-OVz" secondAttribute="leading" id="Nqf-1X-OnT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="XDI-bJ-9QQ" id="o5i-Mx-xX5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RSr-6F-aZ0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1887" y="45"/>
         </scene>
     </scenes>
 </document>

@@ -50,6 +50,16 @@
 		1F762174249F271B00B92E14 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F762173249F271B00B92E14 /* ImageManager.swift */; };
 		1F762176249F502700B92E14 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F762175249F502600B92E14 /* StringExtension.swift */; };
 		1F762178249F554400B92E14 /* APIKeyConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F762177249F554400B92E14 /* APIKeyConstants.swift */; };
+		1F76217E249F63BA00B92E14 /* AutoSuggestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F76217D249F63BA00B92E14 /* AutoSuggestionViewController.swift */; };
+		1F762180249F63D100B92E14 /* AutoSugesstion+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F76217F249F63D100B92E14 /* AutoSugesstion+TableView.swift */; };
+		1F762183249F648200B92E14 /* AutoSuggestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F762181249F648200B92E14 /* AutoSuggestionTableViewCell.swift */; };
+		1F762184249F648200B92E14 /* AutoSuggestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F762182249F648200B92E14 /* AutoSuggestionTableViewCell.xib */; };
+		1F762188249F651000B92E14 /* AutoSuggestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F762187249F651000B92E14 /* AutoSuggestionViewModel.swift */; };
+		1F76218A249F657B00B92E14 /* UITableIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F762189249F657B00B92E14 /* UITableIViewExtension.swift */; };
+		1F76218C249F65D200B92E14 /* UITableViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F76218B249F65D200B92E14 /* UITableViewCellExtension.swift */; };
+		1F76218E249F65E700B92E14 /* UICollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F76218D249F65E700B92E14 /* UICollectionReusableView.swift */; };
+		1F762191249F68B100B92E14 /* AutoSuggestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F762190249F68B100B92E14 /* AutoSuggestionModel.swift */; };
+		1F762193249F6FFD00B92E14 /* UserDeaultHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F762192249F6FFD00B92E14 /* UserDeaultHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +120,16 @@
 		1F762173249F271B00B92E14 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		1F762175249F502600B92E14 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		1F762177249F554400B92E14 /* APIKeyConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeyConstants.swift; sourceTree = "<group>"; };
+		1F76217D249F63BA00B92E14 /* AutoSuggestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoSuggestionViewController.swift; sourceTree = "<group>"; };
+		1F76217F249F63D100B92E14 /* AutoSugesstion+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AutoSugesstion+TableView.swift"; sourceTree = "<group>"; };
+		1F762181249F648200B92E14 /* AutoSuggestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoSuggestionTableViewCell.swift; sourceTree = "<group>"; };
+		1F762182249F648200B92E14 /* AutoSuggestionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutoSuggestionTableViewCell.xib; sourceTree = "<group>"; };
+		1F762187249F651000B92E14 /* AutoSuggestionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoSuggestionViewModel.swift; sourceTree = "<group>"; };
+		1F762189249F657B00B92E14 /* UITableIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableIViewExtension.swift; sourceTree = "<group>"; };
+		1F76218B249F65D200B92E14 /* UITableViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtension.swift; sourceTree = "<group>"; };
+		1F76218D249F65E700B92E14 /* UICollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionReusableView.swift; sourceTree = "<group>"; };
+		1F762190249F68B100B92E14 /* AutoSuggestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoSuggestionModel.swift; sourceTree = "<group>"; };
+		1F762192249F6FFD00B92E14 /* UserDeaultHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserDeaultHandler.swift; path = ImageLazyLoading/Modules/AutoSuggestion/Model/UserDeaultHandler.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				1F7425EA249E1C0A008FA3DC /* Storyboard */,
+				1F762179249F62F500B92E14 /* AutoSuggestion */,
 				1F7425C6249E1752008FA3DC /* ImageListView */,
 			);
 			path = Modules;
@@ -254,6 +275,7 @@
 		1F7425D6249E1862008FA3DC /* Handlers */ = {
 			isa = PBXGroup;
 			children = (
+				1F762192249F6FFD00B92E14 /* UserDeaultHandler.swift */,
 			);
 			path = Handlers;
 			sourceTree = "<group>";
@@ -279,6 +301,9 @@
 				1F7425F1249E239C008FA3DC /* CommonExtensions.swift */,
 				1F76215B249E7F2200B92E14 /* DictionaryExtension.swift */,
 				1F762175249F502600B92E14 /* StringExtension.swift */,
+				1F762189249F657B00B92E14 /* UITableIViewExtension.swift */,
+				1F76218B249F65D200B92E14 /* UITableViewCellExtension.swift */,
+				1F76218D249F65E700B92E14 /* UICollectionReusableView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -383,6 +408,51 @@
 			path = ImageManager;
 			sourceTree = "<group>";
 		};
+		1F762179249F62F500B92E14 /* AutoSuggestion */ = {
+			isa = PBXGroup;
+			children = (
+				1F76218F249F68A400B92E14 /* Model */,
+				1F76217C249F63A000B92E14 /* ViewModel */,
+				1F76217B249F639600B92E14 /* View */,
+				1F76217A249F638F00B92E14 /* Controller */,
+			);
+			path = AutoSuggestion;
+			sourceTree = "<group>";
+		};
+		1F76217A249F638F00B92E14 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1F76217D249F63BA00B92E14 /* AutoSuggestionViewController.swift */,
+				1F76217F249F63D100B92E14 /* AutoSugesstion+TableView.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1F76217B249F639600B92E14 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1F762181249F648200B92E14 /* AutoSuggestionTableViewCell.swift */,
+				1F762182249F648200B92E14 /* AutoSuggestionTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1F76217C249F63A000B92E14 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1F762187249F651000B92E14 /* AutoSuggestionViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1F76218F249F68A400B92E14 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1F762190249F68B100B92E14 /* AutoSuggestionModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -467,6 +537,7 @@
 				1F7425AE249E16C0008FA3DC /* LaunchScreen.storyboard in Resources */,
 				1F7425C8249E1772008FA3DC /* ImageListView.storyboard in Resources */,
 				1F7425EE249E2272008FA3DC /* ImageCollectionViewCell.xib in Resources */,
+				1F762184249F648200B92E14 /* AutoSuggestionTableViewCell.xib in Resources */,
 				1F7425AB249E16C0008FA3DC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -489,6 +560,7 @@
 				1F76215F249E802C00B92E14 /* URLRequestExt.swift in Sources */,
 				1F76216E249F197F00B92E14 /* ImageListViewService.swift in Sources */,
 				1F762176249F502700B92E14 /* StringExtension.swift in Sources */,
+				1F762191249F68B100B92E14 /* AutoSuggestionModel.swift in Sources */,
 				1F762178249F554400B92E14 /* APIKeyConstants.swift in Sources */,
 				1F762174249F271B00B92E14 /* ImageManager.swift in Sources */,
 				1F7425D0249E181F008FA3DC /* ImageListViewController.swift in Sources */,
@@ -498,17 +570,23 @@
 				1F762166249E80AB00B92E14 /* ServerEndPoint.swift in Sources */,
 				1F7425DF249E18E2008FA3DC /* CommonErrorContsants.swift in Sources */,
 				1F7425F0249E234C008FA3DC /* UICollectionViewExtension.swift in Sources */,
+				1F76218A249F657B00B92E14 /* UITableIViewExtension.swift in Sources */,
 				1F7425CA249E1786008FA3DC /* BaseViewController.swift in Sources */,
 				1F762168249E81BD00B92E14 /* ProviderProtocol.swift in Sources */,
 				1F7425DD249E18DA008FA3DC /* ErrorMessageConstants.swift in Sources */,
 				1F762158249E7E7500B92E14 /* HTTPMethod.swift in Sources */,
 				1F7425D2249E182E008FA3DC /* ImageListView+CollectionView.swift in Sources */,
+				1F762183249F648200B92E14 /* AutoSuggestionTableViewCell.swift in Sources */,
 				1F762156249E7E6D00B92E14 /* ResponseStatusCode.swift in Sources */,
 				1F762152249E7E1C00B92E14 /* APIHeader.swift in Sources */,
+				1F762180249F63D100B92E14 /* AutoSugesstion+TableView.swift in Sources */,
 				1F762161249E803400B92E14 /* URLComponentsExt.swift in Sources */,
+				1F762193249F6FFD00B92E14 /* UserDeaultHandler.swift in Sources */,
+				1F76217E249F63BA00B92E14 /* AutoSuggestionViewController.swift in Sources */,
 				1F74259F249E16BE008FA3DC /* AppDelegate.swift in Sources */,
 				1F762148249E3F7E00B92E14 /* ImageListView+SearchBar.swift in Sources */,
 				1F7425E1249E18EB008FA3DC /* CommonConstants.swift in Sources */,
+				1F762188249F651000B92E14 /* AutoSuggestionViewModel.swift in Sources */,
 				1F7425F2249E239C008FA3DC /* CommonExtensions.swift in Sources */,
 				1F7425E9249E1954008FA3DC /* UIViewControllerExtension.swift in Sources */,
 				1F76215C249E7F2200B92E14 /* DictionaryExtension.swift in Sources */,
@@ -521,8 +599,10 @@
 				1F762154249E7E2B00B92E14 /* ParametersEncoding.swift in Sources */,
 				1F762170249F1D1800B92E14 /* ImageViewAPIRepository.swift in Sources */,
 				1F762164249E805D00B92E14 /* ServiceProtocol.swift in Sources */,
+				1F76218E249F65E700B92E14 /* UICollectionReusableView.swift in Sources */,
 				1F76215A249E7E8000B92E14 /* Task.swift in Sources */,
 				1F76213F249E3BDE00B92E14 /* LoaderCollectionReusableView.swift in Sources */,
+				1F76218C249F65D200B92E14 /* UITableViewCellExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
