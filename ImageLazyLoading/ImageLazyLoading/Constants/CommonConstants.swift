@@ -11,3 +11,8 @@ import UIKit
 // MARK: - Common Singleton Objects
 let kUserDefault = UserDefaults.standard
 let kAppDelegate = UIApplication.shared.delegate as? AppDelegate
+let kSuccessfullSearchMaxResult = 10
+
+enum UserDefaultKeys: String {
+    case kSearchAutoSuggestion
+}

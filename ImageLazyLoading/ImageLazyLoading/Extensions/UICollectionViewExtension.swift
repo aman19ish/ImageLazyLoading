@@ -9,8 +9,6 @@
 import Foundation
 import UIKit
 
-extension UICollectionReusableView: CellRegisterProtocol {}
-
 extension UICollectionView {
     private func register<T: UICollectionReusableView>(cell: T.Type) {
         let nibName = cell.nibName

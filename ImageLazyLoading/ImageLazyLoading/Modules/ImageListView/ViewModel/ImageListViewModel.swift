@@ -34,6 +34,9 @@ class ImageListViewModel: NSObject {
             }
             
             if let imageList = responseImageListModel {
+                if (imageList.imageDetailList?.count ?? 0) > 0, let searchString = self?.searchString {
+                    UserDefaults.addSuccessfullSearchString(searchString: searchString)
+                }
                 if self?.currentPage == 1 {
                     self?.model = imageList
                 }

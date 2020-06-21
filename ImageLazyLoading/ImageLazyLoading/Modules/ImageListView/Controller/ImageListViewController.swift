@@ -11,6 +11,7 @@ import UIKit
 class ImageListViewController: BaseViewController {
     // MARK: - Outlets
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var autoSuggestioncontainerView: UIView!
     
     // MARK: - Properties
     lazy var viewModel = ImageListViewModel()
@@ -22,11 +23,12 @@ class ImageListViewController: BaseViewController {
         return searchBar
     }()
     var collectionViewColumns: Int? = ImageListViewContant.defaultNumberOfColumns {
-         didSet {
-             layoutCollectionView()
-         }
+        didSet {
+            layoutCollectionView()
+        }
     }
-     
+    var autoSuggestionViewController: AutoSuggestionViewController?
+    
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +42,8 @@ class ImageListViewController: BaseViewController {
     
     // MARK: - ConfigureView
     func configureView() {
-        self.navigationItem.titleView = searchBar
+        autoSuggestioncontainerView.isHidden = true
+        navigationItem.titleView = searchBar
         collectionViewColumns = ImageListViewContant.defaultNumberOfColumns
     }
     
@@ -88,10 +91,10 @@ extension ImageListViewController {
                 //Append new cells
                 self?.collectionView.performBatchUpdates({
                     let currentRows = self?.collectionView.numberOfItems(inSection: 0)
-
+                    
                     var itemCount = (self?.viewModel.getImageDetailListCount() ?? 0) - 1
                     var tempArray = [IndexPath]()
-
+                    
                     while itemCount >= (currentRows ?? 0) {
                         tempArray.append(IndexPath(row: itemCount, section: 0))
                         itemCount -= 1
@@ -103,6 +106,16 @@ extension ImageListViewController {
                 })
             }
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let autoSuggestionViewController = segue.destination as? AutoSuggestionViewController else { return }
+        autoSuggestionViewController.selectSearchSuggestedItem = { [weak self] autoSuggestionModel in
+            self?.searchBar.searchTextField.text = autoSuggestionModel.successfullSearchString
+            self?.autoSuggestioncontainerView.isHidden = true
+            self?.fetchImageList(by: autoSuggestionModel.successfullSearchString)
+        }
+        self.autoSuggestionViewController = autoSuggestionViewController
     }
     
 }
