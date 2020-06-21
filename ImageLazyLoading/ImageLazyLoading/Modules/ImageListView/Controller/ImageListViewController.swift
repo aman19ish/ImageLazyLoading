@@ -28,6 +28,7 @@ class ImageListViewController: BaseViewController {
         }
     }
     var autoSuggestionViewController: AutoSuggestionViewController?
+    var nullView: CommonNullView?
     
     // MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -45,10 +46,11 @@ class ImageListViewController: BaseViewController {
         autoSuggestioncontainerView.isHidden = true
         navigationItem.titleView = searchBar
         collectionViewColumns = ImageListViewContant.defaultNumberOfColumns
+        nullView = CommonNullView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 250))
+        setUpNullView()
     }
     
     // MARK: - Action Methods
-    
     @IBAction func rightNavBarButtonAction(_ sender: UIBarButtonItem) {
         //Creating alert controller
         let alertController = UIAlertController.init(title: ImageListViewStringContant.changeNumberOfColumns, message: "", preferredStyle: .actionSheet)
@@ -82,7 +84,7 @@ extension ImageListViewController {
             if self?.viewModel.currentPage == 1 {
                 isFreshSetup = true
             }
-            
+            self?.setUpNullView()
             if isFreshSetup {
                 //Create new cells
                 self?.collectionView.contentOffset = CGPoint.zero
@@ -105,6 +107,22 @@ extension ImageListViewController {
                     
                 })
             }
+        }
+    }
+    
+    func setUpNullView() {
+        if let nullView = nullView {
+            if viewModel.getNumberOfRows() <= 0 {
+                if viewModel.searchString.count == 0 {
+                    nullView.configureView(nullImage: UIImageNameConstants.nullSearchIcon, nullMessage: String(format: ImageListViewStringContant.search, viewModel.searchString))
+                } else {
+                    nullView.configureView(nullImage: UIImageNameConstants.nullSearchIcon, nullMessage: String(format: ImageListViewStringContant.weCouldNotFind, viewModel.searchString))
+                }
+                collectionView.addSubview(nullView)
+            } else {
+                nullView.removeFromSuperview()
+            }
+            nullView.center = CGPoint(x: UIScreen.main.bounds.size.width / 2 , y: UIScreen.main.bounds.size.height / 2)
         }
     }
     

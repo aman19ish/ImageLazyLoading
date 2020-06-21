@@ -60,6 +60,8 @@
 		1F76218E249F65E700B92E14 /* UICollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F76218D249F65E700B92E14 /* UICollectionReusableView.swift */; };
 		1F762191249F68B100B92E14 /* AutoSuggestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F762190249F68B100B92E14 /* AutoSuggestionModel.swift */; };
 		1F762193249F6FFD00B92E14 /* UserDeaultHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F762192249F6FFD00B92E14 /* UserDeaultHandler.swift */; };
+		1F762198249F898300B92E14 /* CommonNullView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F762197249F898300B92E14 /* CommonNullView.swift */; };
+		1F76219A249F898D00B92E14 /* CommonNullView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F762199249F898D00B92E14 /* CommonNullView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +132,8 @@
 		1F76218D249F65E700B92E14 /* UICollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionReusableView.swift; sourceTree = "<group>"; };
 		1F762190249F68B100B92E14 /* AutoSuggestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoSuggestionModel.swift; sourceTree = "<group>"; };
 		1F762192249F6FFD00B92E14 /* UserDeaultHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserDeaultHandler.swift; path = ImageLazyLoading/Modules/AutoSuggestion/Model/UserDeaultHandler.swift; sourceTree = SOURCE_ROOT; };
+		1F762197249F898300B92E14 /* CommonNullView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonNullView.swift; sourceTree = "<group>"; };
+		1F762199249F898D00B92E14 /* CommonNullView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommonNullView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +177,7 @@
 			children = (
 				1F76214D249E751700B92E14 /* NetworkHandler */,
 				1F7425C5249E174B008FA3DC /* BaseViewController */,
+				1F762194249F88F400B92E14 /* NullView */,
 				1F7425C4249E1744008FA3DC /* Modules */,
 				1F7425C3249E1727008FA3DC /* AppDelegate */,
 				1F7425D6249E1862008FA3DC /* Handlers */,
@@ -453,6 +458,31 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		1F762194249F88F400B92E14 /* NullView */ = {
+			isa = PBXGroup;
+			children = (
+				1F762196249F891A00B92E14 /* View */,
+				1F762195249F891200B92E14 /* Contants */,
+			);
+			path = NullView;
+			sourceTree = "<group>";
+		};
+		1F762195249F891200B92E14 /* Contants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Contants;
+			sourceTree = "<group>";
+		};
+		1F762196249F891A00B92E14 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1F762197249F898300B92E14 /* CommonNullView.swift */,
+				1F762199249F898D00B92E14 /* CommonNullView.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -539,6 +569,7 @@
 				1F7425EE249E2272008FA3DC /* ImageCollectionViewCell.xib in Resources */,
 				1F762184249F648200B92E14 /* AutoSuggestionTableViewCell.xib in Resources */,
 				1F7425AB249E16C0008FA3DC /* Assets.xcassets in Resources */,
+				1F76219A249F898D00B92E14 /* CommonNullView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,6 +630,7 @@
 				1F762154249E7E2B00B92E14 /* ParametersEncoding.swift in Sources */,
 				1F762170249F1D1800B92E14 /* ImageViewAPIRepository.swift in Sources */,
 				1F762164249E805D00B92E14 /* ServiceProtocol.swift in Sources */,
+				1F762198249F898300B92E14 /* CommonNullView.swift in Sources */,
 				1F76218E249F65E700B92E14 /* UICollectionReusableView.swift in Sources */,
 				1F76215A249E7E8000B92E14 /* Task.swift in Sources */,
 				1F76213F249E3BDE00B92E14 /* LoaderCollectionReusableView.swift in Sources */,

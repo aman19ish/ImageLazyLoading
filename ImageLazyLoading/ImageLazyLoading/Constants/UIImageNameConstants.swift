@@ -8,4 +8,6 @@
 
 import UIKit
 
-
+struct UIImageNameConstants {
+    static let nullSearchIcon = "nullSearchIcon"
+}

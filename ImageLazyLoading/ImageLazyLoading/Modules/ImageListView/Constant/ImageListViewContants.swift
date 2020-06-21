@@ -11,6 +11,8 @@ import Foundation
 struct ImageListViewStringContant {
     static let searchImages = "Search Images"
     static let changeNumberOfColumns = "Change number of columns"
+    static let weCouldNotFind = "We couldn't find \"%@\""
+    static let search = "Search"
 }
 
 struct ImageListViewContant {
