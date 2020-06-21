@@ -11,9 +11,25 @@ import UIKit
 class ImageCollectionViewCell: UICollectionViewCell {
 
     // MARK: - Outlets
-    @IBOutlet weak var pixabayImageView: UIImageView!
+    @IBOutlet weak var displayImageView: UIImageView!
     
     // MARK: - Properties
+    var imageDetailModel: ImageDetailModel? {
+        didSet {
+            if let model = imageDetailModel {
+                displayImageView.image = UIImage(named: "placeHolderImage")
+                if let previewURL = model.previewURL {
+                    ImageManager.shared.downloadImage(imageURL: previewURL) { [weak self] (imageURL, image) in
+                        if imageURL == previewURL, let image = image {
+                            DispatchQueue.main.async {
+                                self?.displayImageView.image = image
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     
     // MARK: - Cell Life Cycle
     override func awakeFromNib() {

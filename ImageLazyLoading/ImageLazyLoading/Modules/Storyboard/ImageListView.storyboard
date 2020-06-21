@@ -15,10 +15,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4yY-vC-yXI">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4yY-vC-yXI">
                                 <rect key="frame" x="0.0" y="108" width="414" height="788"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jG9-QZ-fc3">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="jG9-QZ-fc3">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="50" height="50"/>
@@ -29,8 +29,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Qib-cb-N8K">
+                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Qib-cb-N8K">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                            <color key="color" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </activityIndicatorView>
                                     </subviews>
                                     <constraints>
@@ -46,6 +47,7 @@
                                 <connections>
                                     <outlet property="dataSource" destination="Lzb-6u-78Z" id="tbe-bV-Lij"/>
                                     <outlet property="delegate" destination="Lzb-6u-78Z" id="I70-WI-QSi"/>
+                                    <outlet property="prefetchDataSource" destination="Lzb-6u-78Z" id="o5a-au-Go7"/>
                                 </connections>
                             </collectionView>
                         </subviews>
@@ -58,7 +60,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DIE-d1-JfS"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ywm-Ns-c3P"/>
+                    <navigationItem key="navigationItem" id="ywm-Ns-c3P">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="f86-CF-3Ny">
+                            <color key="tintColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="rightNavBarButtonAction:" destination="Lzb-6u-78Z" id="qvy-Ub-HFA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="4yY-vC-yXI" id="Hho-QC-Tho"/>
                     </connections>

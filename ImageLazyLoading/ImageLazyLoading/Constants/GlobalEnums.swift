@@ -13,3 +13,7 @@ enum Storyboard: String {
     case imageListView = "ImageListView"
     case main = "Main"
 }
+
+enum ViewState {
+    case loaded, loading
+}

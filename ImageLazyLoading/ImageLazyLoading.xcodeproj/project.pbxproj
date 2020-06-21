@@ -45,6 +45,11 @@
 		1F762166249E80AB00B92E14 /* ServerEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F762165249E80AB00B92E14 /* ServerEndPoint.swift */; };
 		1F762168249E81BD00B92E14 /* ProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F762167249E81BD00B92E14 /* ProviderProtocol.swift */; };
 		1F76216A249E81D400B92E14 /* URLSessionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F762169249E81D400B92E14 /* URLSessionProvider.swift */; };
+		1F76216E249F197F00B92E14 /* ImageListViewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F76216D249F197F00B92E14 /* ImageListViewService.swift */; };
+		1F762170249F1D1800B92E14 /* ImageViewAPIRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F76216F249F1D1800B92E14 /* ImageViewAPIRepository.swift */; };
+		1F762174249F271B00B92E14 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F762173249F271B00B92E14 /* ImageManager.swift */; };
+		1F762176249F502700B92E14 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F762175249F502600B92E14 /* StringExtension.swift */; };
+		1F762178249F554400B92E14 /* APIKeyConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F762177249F554400B92E14 /* APIKeyConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +105,11 @@
 		1F762165249E80AB00B92E14 /* ServerEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerEndPoint.swift; sourceTree = "<group>"; };
 		1F762167249E81BD00B92E14 /* ProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderProtocol.swift; sourceTree = "<group>"; };
 		1F762169249E81D400B92E14 /* URLSessionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProvider.swift; sourceTree = "<group>"; };
+		1F76216D249F197F00B92E14 /* ImageListViewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListViewService.swift; sourceTree = "<group>"; };
+		1F76216F249F1D1800B92E14 /* ImageViewAPIRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewAPIRepository.swift; sourceTree = "<group>"; };
+		1F762173249F271B00B92E14 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		1F762175249F502600B92E14 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		1F762177249F554400B92E14 /* APIKeyConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeyConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +205,7 @@
 		1F7425C6249E1752008FA3DC /* ImageListView */ = {
 			isa = PBXGroup;
 			children = (
+				1F76216C249F196C00B92E14 /* APIRepository */,
 				1F762146249E3F3800B92E14 /* Constant */,
 				1F7425CE249E179A008FA3DC /* Controller */,
 				1F7425CD249E1795008FA3DC /* ViewModel */,
@@ -267,6 +278,7 @@
 				1F7425EF249E234C008FA3DC /* UICollectionViewExtension.swift */,
 				1F7425F1249E239C008FA3DC /* CommonExtensions.swift */,
 				1F76215B249E7F2200B92E14 /* DictionaryExtension.swift */,
+				1F762175249F502600B92E14 /* StringExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -297,11 +309,14 @@
 		1F76214D249E751700B92E14 /* NetworkHandler */ = {
 			isa = PBXGroup;
 			children = (
+				1F762172249F270F00B92E14 /* ImageManager */,
+				1F762171249F1E2A00B92E14 /* EndPoints */,
 				1F76216B249E81F800B92E14 /* Provider */,
 				1F762162249E805100B92E14 /* Protocol */,
 				1F76215D249E802000B92E14 /* Extension */,
 				1F762150249E7E1300B92E14 /* Enums */,
 				1F762165249E80AB00B92E14 /* ServerEndPoint.swift */,
+				1F762177249F554400B92E14 /* APIKeyConstants.swift */,
 			);
 			path = NetworkHandler;
 			sourceTree = "<group>";
@@ -342,6 +357,30 @@
 				1F762169249E81D400B92E14 /* URLSessionProvider.swift */,
 			);
 			path = Provider;
+			sourceTree = "<group>";
+		};
+		1F76216C249F196C00B92E14 /* APIRepository */ = {
+			isa = PBXGroup;
+			children = (
+				1F76216D249F197F00B92E14 /* ImageListViewService.swift */,
+				1F76216F249F1D1800B92E14 /* ImageViewAPIRepository.swift */,
+			);
+			path = APIRepository;
+			sourceTree = "<group>";
+		};
+		1F762171249F1E2A00B92E14 /* EndPoints */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = EndPoints;
+			sourceTree = "<group>";
+		};
+		1F762172249F270F00B92E14 /* ImageManager */ = {
+			isa = PBXGroup;
+			children = (
+				1F762173249F271B00B92E14 /* ImageManager.swift */,
+			);
+			path = ImageManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -448,6 +487,10 @@
 			files = (
 				1F762141249E3C5A00B92E14 /* ImageListViewModel.swift in Sources */,
 				1F76215F249E802C00B92E14 /* URLRequestExt.swift in Sources */,
+				1F76216E249F197F00B92E14 /* ImageListViewService.swift in Sources */,
+				1F762176249F502700B92E14 /* StringExtension.swift in Sources */,
+				1F762178249F554400B92E14 /* APIKeyConstants.swift in Sources */,
+				1F762174249F271B00B92E14 /* ImageManager.swift in Sources */,
 				1F7425D0249E181F008FA3DC /* ImageListViewController.swift in Sources */,
 				1F762145249E3EF000B92E14 /* ImageListViewContants.swift in Sources */,
 				1F7425E7249E1901008FA3DC /* UIImageNameConstants.swift in Sources */,
@@ -476,6 +519,7 @@
 				1F762143249E3CA500B92E14 /* ImageListModel.swift in Sources */,
 				1F76216A249E81D400B92E14 /* URLSessionProvider.swift in Sources */,
 				1F762154249E7E2B00B92E14 /* ParametersEncoding.swift in Sources */,
+				1F762170249F1D1800B92E14 /* ImageViewAPIRepository.swift in Sources */,
 				1F762164249E805D00B92E14 /* ServiceProtocol.swift in Sources */,
 				1F76215A249E7E8000B92E14 /* Task.swift in Sources */,
 				1F76213F249E3BDE00B92E14 /* LoaderCollectionReusableView.swift in Sources */,

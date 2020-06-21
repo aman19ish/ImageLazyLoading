@@ -9,13 +9,5 @@
 import Foundation
 
 open class ServerEndPoint {
-    
-    private static var serverURLDictionary = [String: String]()
-    static public var baseUrlString: String = ""
-    
-    static public func getAPIEndPoint(for key: String) -> String {
-        
-        let serverPath = serverURLDictionary[key] ?? ""
-        return serverPath
-    }
+    static public var baseUrlString: String = "https://pixabay.com/api"
 }

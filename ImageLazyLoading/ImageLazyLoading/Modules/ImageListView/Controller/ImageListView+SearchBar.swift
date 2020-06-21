@@ -22,4 +22,16 @@ extension ImageListViewController: UISearchBarDelegate {
         searchBar.text = nil
     }
     
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        if let searchText = searchBar.text {
+            viewModel.fetchImagesList(searchString: searchText) { [weak self] (success, error) in
+                if let error = error {
+                    self?.showAlertWithHandlers(messageText: error, cancelCompletion: nil, okCompletion: nil)
+                }
+                self?.updateCollectionViewData()
+            }
+        }
+    }
+    
 }
